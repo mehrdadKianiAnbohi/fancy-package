@@ -8,8 +8,9 @@ export default {
   input: "src/index.ts",
   output: [
     {
-      file: "dist/index.cjs.js",
+      file: "dist/index.cjs",
       format: "cjs",
+      exports: "named",
       sourcemap: true,
     },
     {
@@ -20,7 +21,11 @@ export default {
     {
       file: "dist/index.umd.js",
       format: "umd",
-      name: "MyLibrary",
+      name: "Fancy",
+      globals: {
+        react: "React",
+        "react-dom": "ReactDOM",
+      },
       sourcemap: true,
       plugins: [terser()],
     },
@@ -34,11 +39,7 @@ export default {
         auto: (id) => !id.includes("global.css"),
       },
       use: ["sass"],
-      // config: {
-      //   path: "./postcss.config.js",
-      // },
     }),
-
     typescript({ tsconfig: "./tsconfig.json" }),
   ],
   external: ["react", "react-dom"],
