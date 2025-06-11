@@ -34,7 +34,8 @@ export default {
     resolve(),
     commonjs(),
     postcss({
-      extract: true,
+      extract: "index.css",
+      minimize: true,
       modules: {
         auto: (id) => !id.includes("global.css"),
       },
