@@ -1,9 +1,9 @@
 {
   "name": "@kianianbohi/fancy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A reusable UI library built with React, TypeScript, Tailwind, and Rollup.",
   "license": "MIT",
-  "author": "Your Name",
+  "author": "mehrdad kiani",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.esm.js",
